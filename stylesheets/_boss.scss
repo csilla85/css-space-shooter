@@ -1,0 +1,68 @@
+#boss {
+    @include general(100%, max-content, absolute);
+    top: 3em;
+    transform: translateY(-15em);
+    transform-origin: 50% 0%;
+    @include flex(column, flex-start, center);
+
+    .body {
+        clip-path: polygon(50% 100%, 0 0, 100% 0);
+        @include general(20em, 8em, relative);
+        background-image: linear-gradient($darkred 20%, transparent 21%), linear-gradient(42deg, $darkred 36%, transparent 37%), linear-gradient(318deg, $darkred 36%, $midred 37%);
+        background-size: 20em 8em;
+        background-repeat: no-repeat;
+        z-index: 2;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 1em;
+            left: 7em;
+            border-top: 3em solid $darkred;
+            border-left: 3em solid transparent;
+            border-right: 3em solid transparent;
+        }
+    }
+
+    .guns {
+        @include flex(row, space-between, none);
+        width: 11em;
+        margin-top: -5em;
+        z-index: 1;
+
+        .g {
+            @include general(1.5em, 4.5em, none);
+            background-color: $midred;
+            box-shadow: .5em .5em 0 $darkred inset;
+        }
+    }
+    
+    .bullets{
+        @include flex(row, space-between, none);
+        width: 11.2em;
+        transform: translateY(-3em);
+    
+        .b{
+            @include general(.7em, 3em, none);
+            margin: 0 .4em;
+            background: linear-gradient(transparent, $lightred 85%);
+            border-radius: 50%;
+        }
+    }
+}
+
+.left,
+.right {
+    width: 3.5em;
+    @include flex(row, space-between, none);
+}
+
+.blast{
+    @include general(7em, 6em, relative);
+    background-image: url(../images/boom4.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+    top: -7em;
+    opacity: 0;
+}

@@ -1,0 +1,67 @@
+@import 
+'_variables',
+'_keyframes',
+'_animations',
+'_stars',
+'_asteroid',
+'_spaceship',
+'_boss';
+
+/*-----------global settings-------------*/
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Audiowide', cursive;
+    text-decoration: none;
+    color: $lightgray;
+    font-size: $page-zoom;
+    box-sizing: border-box;
+    background: #0c152c;
+}
+
+section {   
+    background: radial-gradient(ellipse at bottom, #462849 0%, #0c152c 100%);
+    background-repeat: no-repeat;
+    overflow: hidden;
+    margin: 0 auto;
+    @include general(38em, 74em, relative);
+}
+
+.notifications {
+    @include general(100%, 100%, absolute);
+    @include flex(row, center, center);
+    z-index: 99;
+}
+
+span {
+    position: absolute;
+    text-align: center;
+}
+
+.title2,
+.credits {
+    margin-top: 3em;
+    text-align: center;
+    font-size: 1.7em;
+    opacity: 0;
+}
+
+.title,
+.intro,
+.message,
+.alert,
+.end {
+    margin: -4.3em 1em 0 1em;
+    background-image: linear-gradient($blue 25%, $darkred 26%, $blue 75%, $darkred 76%);
+    -webkit-background-clip: text;
+    background-clip: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.04em rgba(255, 255, 255, 0.7);
+    font-size: 6em;
+    opacity: 0;
+}
+
+.intro{
+    margin: -4.3em .5em 0 .5em;
+}

@@ -1,0 +1,40 @@
+/*-----------star-styling-------------*/
+@mixin starstyle ($size){
+    width: $size;
+    height: $size;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 $size*2 $size*0.1 #fff;
+}
+
+#starflex {
+    @include general(100%, 148em, none);
+    transform: translateY(-74em);
+    @include flex(row, space-around, none);
+}
+
+.column {
+    @include flex(column, space-around, center);
+
+    &:nth-child(2) {
+        transform: translateY(19.5em);
+    }
+}
+
+.stars {
+    @include starstyle(0.2em);
+
+    &::after {
+        content: "";
+        position: absolute;
+        transform: translate(-3.5em, -18.5em);
+        @include starstyle(0.4em);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        transform: translate(2.5em, -9em);
+        @include starstyle(0.3em);
+    }
+}

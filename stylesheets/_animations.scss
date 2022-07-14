@@ -1,0 +1,121 @@
+/*------------------------- bg animations --  ------------------------------*/
+
+#starflex {
+    animation: starmove 8s linear 0s 6, twinkle 200ms ease-in-out 0s infinite;
+}
+
+/*------------------------- text animations --  ------------------------------*/
+
+.title,
+.title2 {
+    animation: start 3.5s linear .5s forwards;
+}
+
+.intro {
+    animation: popup 3.8s ease-in-out 5.45s forwards;
+}
+
+.message {
+    animation: levelup 2s ease-in-out 25s 1 forwards;
+}
+
+.alert {
+    animation: danger 3.5s ease-in-out 45s 1 forwards;
+}
+
+.end {
+    animation: popup 8s ease-in-out 68s 1 forwards;
+}
+
+.credits {
+    animation: theend 8s linear 77s 1 forwards;
+}
+
+/*------------------------- all spaceship animations --------------------------------*/
+
+#spaceship {
+    animation:
+        movin 2s ease-in-out 3.5s 1 forwards,
+        shipmove1 6s ease-in-out 14.5s 1 forwards,
+        shipmove2 6s ease-in-out 34.5s 1 forwards,
+        battle 16s ease-in-out 48.5s 1 forwards,
+        moveout 2s ease-in 70s forwards;
+}
+
+#outer {
+    /*--shooting single--*/
+    animation: 
+        shooting .22s ease-in 27.5s 4, 
+        shooting .22s ease-in 45s 4,
+        shooting .22s ease-in 50.5s 16,
+        shooting .22s ease-in 56s 48;
+}
+
+#inner {
+    /*--shooting double--*/
+    animation:
+        shooting .22s ease-in 45s 4,
+        shooting .22s ease-in 50.5s 16,
+        shooting .22s ease-in 56s 48;
+}
+
+.gun {
+    animation: upgrade 3s ease-in 21s normal backwards;
+    /*--first gun upgrade--*/
+}
+
+.gun2 {
+    animation: upgrade 3s ease-in 41s normal backwards;
+    /*--second gun upgrade--*/
+}
+
+.engine {
+    animation: rocket 3ms ease-in 0s infinite alternate;
+    /*--flame--*/
+}
+
+/*------------------------- all asteroid animations --------------------------------*/
+
+#wave1 {
+    .asteroid {
+        animation: floating 10s linear 10s 1;
+        /*--first wave--*/
+    }
+}
+
+#wave2 {
+    .asteroid {
+        animation: floating 10s linear 30s 1;
+        /*--second wave--*/
+    }
+}
+
+/*------------------------- all boss animations --------------------------------*/
+
+#boss {
+    animation:
+        appear 2s linear 46s forwards,
+        idle 6s linear 48s 2.5 forwards;
+
+    .body {
+        animation: exploding 4.5s ease-out 63s 1 forwards;
+    }
+}
+
+.b {
+    animation: shooting2 .2s ease-in 48.8s 5, shooting2 .2s ease-in 55s 5;
+}
+
+.blast {
+    animation: poof1 1s ease-out 52.5s, poof2 1s ease-out 58.5s, poof3 4s ease-out 64s forwards;
+}
+
+.right {
+    animation: damage 2s ease-out 52.5s 1 forwards;
+    /*--first gun poof--*/
+}
+
+.left {
+    animation: damage 2s ease-out 58.5s 1 forwards;
+    /*--second gun poof--*/
+}

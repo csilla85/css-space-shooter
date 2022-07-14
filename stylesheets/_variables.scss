@@ -1,0 +1,39 @@
+/*-----------variables-------------*/
+
+$page-zoom: 10px;
+
+/*-----------asteroid colours-------------*/
+$lightbrown: rgb(231, 171, 91);
+$midbrown: rgb(73, 163, 163);
+$darkbrown: rgb(73, 96, 139);
+$shadowbrown: rgb(75, 37, 58);
+$transparent: rgba(179, 117, 61, 0);
+
+/*-----------ship colours-------------*/
+$lightgray: #e6e6e6;
+$midgray: #aaa;
+$darkgray: #8b8b8b;
+$darkblue: #14265a;
+$yellow: #ffee00;
+$orange: rgb(255, 103, 1);
+$blue: rgb(0, 162, 255);
+
+/*-----------boss colours-------------*/
+$lightred: #ff6753;
+$midred: #cf313e;
+$darkred: #721744;
+
+/*-----------general style------------*/
+
+@mixin flex ($direct, $spacing-h, $spacing-v){
+    display: flex;
+    flex-direction: $direct;
+    justify-content: $spacing-h;
+    align-items: $spacing-v;
+}
+
+@mixin general($width, $height, $position){
+    width: $width;
+    height: $height;
+    position: $position;
+}

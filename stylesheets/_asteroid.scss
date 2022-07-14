@@ -1,0 +1,138 @@
+/*-----------asteroid-styling-------------*/
+
+@mixin asteroid ($size, $csize) {
+    @for $i from 1 through 5 {
+        #asteroid#{$i} {
+            background-color: $midbrown;
+            box-shadow: 1em 1em 0 1em rgba($shadowbrown, .5) inset;
+            overflow: hidden;
+            width: $i * 1em+$size;
+            height: $i * 1em+$size;
+            border-top-left-radius: 39% 41%;
+            border-top-right-radius: 61% 45%;
+            border-bottom-right-radius: 67% 55%;
+            border-bottom-left-radius: 33% 59%;
+            background-image:
+                radial-gradient($darkbrown 65%, transparent 67%),
+                radial-gradient($darkbrown 65%, transparent 67%),
+                radial-gradient($darkbrown 65%, transparent 67%),
+
+                radial-gradient($shadowbrown 65%, transparent 67%),
+                radial-gradient($shadowbrown 65%, transparent 67%),
+                radial-gradient($shadowbrown 65%, transparent 67%);
+            background-size:
+                ($i + $csize)*.22em ($i + $csize)*.22em,
+                ($i + $csize)*.12em ($i + $csize)*.12em,
+                ($i + $csize)*.22em ($i + $csize)*.22em,
+
+                ($i + $csize)*.25em ($i + $csize)*.25em,
+                ($i + $csize)*.15em ($i + $csize)*.15em,
+                ($i + $csize)*.25em ($i + $csize)*.25em;
+            background-position:
+                20% 70%, 25% 20%, 75% 55%,
+                14% 71%, 22% 17%, 80% 58%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+#asteroidflex {
+    @include general(80%, 100%, absolute);
+    padding: 0 4em;
+    z-index: 2;
+    top: 0;
+    @include asteroid(4, 7);
+
+    #wave1 {
+        transform: translateY(-74em);
+        @include flex(column, space-evenly, none);
+        height: 100%;
+
+        .asteroid {
+            &:nth-child(1) {
+                align-self: flex-end;
+                transform: translate(-9em, 0em);
+            }
+
+            &:nth-child(2) {
+                align-self: flex-end;
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(3) {
+                align-self: flex-start;
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(4) {
+                align-self: flex-start;
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(5) {
+                align-self: flex-end;
+                transform: translate(-8em, 0em);
+            }
+
+            &:nth-child(6) {
+                align-self: flex-end;
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(7) {
+                align-self: flex-end;
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(8) {
+                align-self: flex-start;
+                transform: translate(0em, 0em);
+            }
+        }
+    }
+
+    #wave2 {
+        transform: translateY(-148em);
+        @include flex(column, space-evenly, none);
+        height: 100%;
+
+        .asteroid {
+            &:nth-child(1) {
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(2) {
+                align-self: flex-end;
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(3) {
+                align-self: flex-end;
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(4) {
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(5) {
+                align-self: center;
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(6) {
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(7) {
+                align-self: flex-end;
+                transform: translate(0em, 0em);
+            }
+
+            &:nth-child(8) {
+                align-self: flex-end;
+                transform: translate(0em, 0em);
+            }
+        }
+    }
+}

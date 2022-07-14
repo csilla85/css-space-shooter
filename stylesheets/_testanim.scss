@@ -1,0 +1,277 @@
+@keyframes shooting {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-40em);
+        opacity: 1;
+    }
+}
+
+@keyframes moveout {
+    0% {
+        transform: translate(0em, -15em);
+    }
+
+    100% {
+        transform: translate(0em, -80em);
+    }
+}
+
+@keyframes shooting2 {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(65em);
+        opacity: 1;
+    }
+}
+
+
+@keyframes idle {
+    0% {
+        transform: translate(0em, 3em);
+    }
+
+    25% {
+        transform: translate(-5em, 2em);
+    }
+
+    50% {
+        transform: translate(0em, 3em);
+    }
+
+    75% {
+        transform: translate(5em, 2em);
+    }
+
+    100% {
+        transform: translate(0em, 3em);
+    }
+}
+
+@keyframes poof1 {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateX(4em);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1) translateX(4em);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5) translateX(4em);
+    }
+}
+
+@keyframes poof2 {
+    0% {
+        opacity: 0;
+        transform: scale(0) translateX(-4em);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1) translateX(-4em);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.5) translateX(-4em);
+    }
+}
+
+@keyframes poof3 {
+    0% {
+        opacity: 0;
+        transform: scale(0) translate(-2em, -2em);
+    }
+
+    10% {
+        opacity: 1;
+        transform: scale(1) translate(-2em, -2em);
+    }
+
+    30% {
+        opacity: 0;
+        transform: scale(1.5) translate(-2em, -2em);
+    }
+
+    31% {
+        opacity: 0;
+        transform: scale(0) translate(2em, -2em);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1) translate(2em, -2em);
+    }
+
+    60% {
+        opacity: 0;
+        transform: scale(1.3) translate(2em, -2em);
+    }
+
+    61% {
+        opacity: 0;
+        transform: scale(0) translate(0em, 0em);
+    }
+
+    70% {
+        opacity: 1;
+        transform: scale(2.5) translate(0em, 0em);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(3.5) translate(0em, 0em);
+    }
+}
+
+@keyframes battle {
+    0% {
+        transform: none;
+    }
+
+    7%,
+    8% {
+        transform: translate(11em, -2em);
+    }
+
+    14% {
+        transform: translate(6em, -8em);
+    }
+
+    32%,
+    35% {
+        transform: translate(0em, -8em);
+    }
+
+    50% {
+        transform: translate(7em, -8em);
+    }
+
+    65% {
+        transform: translate(-3em, -8em);
+    }
+
+    80% {
+        transform: translate(0em, -8em);
+    }
+
+    90% {
+        transform: translate(0em, -15em);
+    }
+
+    100% {
+        transform: translate(0em, -15em);
+    }
+}
+
+@keyframes damage {
+    0% {
+        transform: none;
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(2);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0) rotate(2turn);
+        opacity: 0;
+    }
+}
+
+@keyframes exploding {
+    0% {
+        transform: none;
+    }
+
+    3%,
+    9%,
+    15%,
+    21%,
+    27%,
+    33%,
+    39%,
+    45%,
+    51% {
+        transform: rotate(-1deg);
+    }
+
+    6%,
+    12%,
+    18%,
+    24%,
+    30%,
+    36%,
+    42%,
+    48% {
+        transform: rotate(1deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+}
+
+
+#spaceship {
+    animation: battle 16s ease-in-out .5s 1 forwards, moveout 2s ease-in 22s forwards;
+}
+
+#outer {
+    animation: shooting .22s ease-in 2.5s 16, shooting .22s ease-in 8s 20, shooting .22s ease-in 12s 30;
+}
+
+#inner {
+    animation: shooting .22s ease-in 2.5s 16, shooting .22s ease-in 8s 20, shooting .22s ease-in 12s 30;
+}
+
+
+
+#boss {
+    animation: idle 5s linear 0s 2.5 forwards;
+
+    #body {
+        animation: exploding 4.5s ease-out 15s 1 forwards;
+    }
+}
+
+.b {
+    animation: shooting2 .2s ease-in .8s 5, shooting2 .2s ease-in 7s 5;
+}
+
+.blast {
+    animation: poof1 1s ease-out 4.5s, poof2 1s ease-out 10.5s, poof3 4s ease-out 16s forwards;
+}
+
+.right {
+    animation: damage 2s ease-out 4.5s 1 forwards;
+}
+
+.left {
+    animation: damage 2s ease-out 10.5s 1 forwards;
+}

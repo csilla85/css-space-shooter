@@ -1,0 +1,127 @@
+/*-----------spaceship-styling-------------*/
+
+#spaceship {
+    @include general(100%, max-content, absolute);
+    bottom: 2em;
+    transform-origin: 50% 100%;
+    transform: translateY(14em);
+    @include flex(column, none, center);
+
+    .shots{
+        @include flex(row, space-between, flex-end);
+        @include general(inherit, max-content, relative);
+        transform: translateY(3.7em);
+        opacity: 0;
+
+        .bullet{
+            width: .35em;
+            height: 2em;
+            background: linear-gradient(#fff 15%, transparent);
+            border-radius: 50%;
+        }
+    }
+
+    #outer{
+        width: 8.4em;
+        transform: translateY(5em);
+    }
+
+    #inner{
+        width: 5.9em;
+    }
+
+    .main {
+        @include general(9em, 5em, relative);
+        @include flex(row, space-between, flex-end);
+
+        .body {
+            @include general(2.2em, 5.2em, relative);
+            bottom: 0.4em;
+            border-radius: 2em 2em .4em .4em;
+            background-color: $lightgray;
+            box-shadow: .6em -.2em 0 $midgray inset, 0 .4em 0 $darkblue inset;
+            border: .1em ridge $midgray;
+            z-index: 1;
+            margin: 0 .8em;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -.4em;
+                left: 1.5em;
+                width: 1.3em;
+                height: 3.1em;
+                border-radius: 1.6em 1.6em .4em .4em;
+                background-color: $lightgray;
+                box-shadow: .3em -.2em 0 $midgray inset;
+                border: .1em ridge $midgray;
+            }
+
+            &::after {
+                left: -.9em;
+            }
+        }
+
+        .wing {
+            position: absolute;
+            width: 8.2em;
+            height: 2.2em;
+            bottom: .6em;
+            left: .4em;
+            border-radius: 50% 50% 0 0;
+            background-color: lighten($darkgray, 25%);
+            box-shadow: 0 -.2em 0 $darkgray inset;
+            border: .1em ridge $darkgray;
+        }
+
+        .gun {
+            width: .8em;
+            height: 4em;
+            border-radius: 30%;
+            background: $lightgray;
+            box-shadow: .2em -.2em 0 $midgray inset;
+            border: .1em ridge $midgray;
+            z-index: 1;
+        }
+
+        .gun2{
+            width: .6em;
+            height: 3.3em;
+            border-radius: 30%;
+            background-color: $lightgray;
+            box-shadow: .1em -.1em 0 $midgray inset;
+            border: .1em ridge $midgray;
+            z-index: 2;
+            position: relative;
+
+            &::before{
+                content: '';
+                position: absolute;
+                top: .5em;
+                left: -.2em;
+                width: .8em;
+                height: 1em;
+                border-radius: 20%;
+                background-color: $darkblue;
+                border: .1em ridge $midgray;
+            }
+        }
+    }
+
+    .engine {
+        width: 4.8em;
+        height: 3em;
+        margin-top: -0.2em;
+        transform-origin: center top;
+        @include flex(row, space-around, flex-start);
+
+        .flame {
+            width: 2em;
+            height: 3em;
+            border-radius: 50%;
+            background: radial-gradient(at 50% -5%, rgba($blue, 0.6) 10%, rgba(255, 255, 255, 0.8) 12%, rgb(255, 255, 255) 20%, $yellow 25%, rgba($orange, .75) 40%, rgba($orange, .1) 60%, transparent 70%);
+            filter: blur(.03em);
+        }
+    }
+}

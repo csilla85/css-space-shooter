@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Space Shooter</title>
+</head>
+
+<body>
+    <audio id="bgmusic" src="./sounds/Space Heroes-crop.ogg"></audio>
+    <audio id="pewpew" src="./sounds/laser-beam-full.mp3"></audio>
+    <audio id="ending" src="./sounds/Victory Tune-crop.ogg"></audio>
+    <audio id="blast" src="./sounds/bomb-explosion.wav"></audio>
+    <section>
+        <div class="notifications">
+            <span class="title">Space Shooter</span>
+            <span class="title2">a fun CSS project</span>
+            <span class="intro">Ready Player 1!</span>
+            <span class="message">Level Up!</span>
+            <span class="alert">Danger ahead!</span>
+            <span class="end">You Win!</span>
+            <span class="credits">
+                Coded by Chi-chi<br><br>
+                Music by Oblidivm <br>(opengameart.org)
+            </span>
+        </div>
+        <div id="play">
+            <div id="starflex">
+                <div class="column">
+                    <div class="stars"></div>
+                    <div class="stars"></div>
+                    <div class="stars"></div>
+                    <div class="stars"></div>
+                </div>
+                <div class="column">
+                    <div class="stars"></div>
+                    <div class="stars"></div>
+                    <div class="stars"></div>
+                    <div class="stars"></div>
+                </div>
+                <div class="column">
+                    <div class="stars"></div>
+                    <div class="stars"></div>
+                    <div class="stars"></div>
+                    <div class="stars"></div>
+                </div>
+            </div>
+            <div id="asteroidflex">
+                <div id="wave1">
+                    <div id="asteroid5" class="asteroid"></div>
+                    <div id="asteroid2" class="asteroid"></div>
+                    <div id="asteroid4" class="asteroid"></div>
+                    <div id="asteroid1" class="asteroid"></div>
+                    <div id="asteroid1" class="asteroid"></div>
+                    <div id="asteroid2" class="asteroid"></div>
+                    <div id="asteroid4" class="asteroid"></div>
+                    <div id="asteroid1" class="asteroid"></div>
+                </div>
+                <div id="wave2">
+                    <div id="asteroid5" class="asteroid"></div>
+                    <div id="asteroid2" class="asteroid"></div>
+                    <div id="asteroid4" class="asteroid"></div>
+                    <div id="asteroid1" class="asteroid"></div>
+                    <div id="asteroid1" class="asteroid"></div>
+                    <div id="asteroid2" class="asteroid"></div>
+                    <div id="asteroid4" class="asteroid"></div>
+                    <div id="asteroid1" class="asteroid"></div>
+                </div>
+            </div>
+            <div id="spaceship">
+                <div id="outer" class="shots">
+                    <div class="bullet"></div>
+                    <div class="bullet"></div>
+                </div>
+                <div id="inner" class="shots">
+                    <div class="bullet"></div>
+                    <div class="bullet"></div>
+                </div>
+                <div class="main">
+                    <div class="wing"></div>
+                    <div class="gun"></div>
+                    <div class="gun2"></div>
+                    <div class="body"></div>
+                    <div class="gun2"></div>
+                    <div class="gun"></div>
+                </div>
+                <div class="engine">
+                    <div class="flame"></div>
+                    <div class="flame"></div>
+                </div>
+            </div>
+            <div id="boss">
+                <div class="body"></div>
+                <div class="guns">
+                    <div class="left">
+                        <div class="g"></div>
+                        <div class="g"></div>
+                    </div>
+                    <div class="right">
+                        <div class="g"></div>
+                        <div class="g"></div>
+                    </div>
+                </div>
+                <div class="bullets">
+                    <div class="left">
+                        <div class="b"></div>
+                        <div class="b"></div>
+                    </div>
+                    <div class="right">
+                        <div class="b"></div>
+                        <div class="b"></div>
+                    </div>
+                </div>
+                <div class="blast"></div>
+            </div>
+        </div>
+    </section>
+    <script src="sound.js"></script>
+</body>
+
+</html>
